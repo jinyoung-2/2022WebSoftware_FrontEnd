@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bames and Noble</title>
+    <style media="screen">
+      body{
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: center;
+        font-family: arial;
+      }
+      #header{
+        background-color: #8CACB2;
+        margin:10px;
+        padding: 20px;
+        text-color: white;
+      }
+      #header img{
+        width:300px;
+        height:70px;
+      }
+      #nav{
+        float: right;
+      }
+      #header h1{
+        display: inline;
+        /* float: left ; */
+        position: relative;
+        left: 20px;
+        bottom: 20px;
+        color: white;
+      }
+      ul{
+        text-align: center;
+        position: relative;
+        left: -20px;
+        top: 15px;
+      }
+      ul li{
+        background-color: white;
+        display: inline;
+        margin: 5px;
+        padding-left: 4px;
+        padding-right: 4px;
+
+      }
+      ul li a{
+        text-decoration: none;
+      }
+      ul li a:hover{
+        background-color: gray;
+      }
+
+      #content{
+        margin-top: 50px;
+      }
+
+      .bookInfo{
+        width: 60%;
+        float:left;
+        position: relative;
+      }
+      img{
+        width: 300px;
+        height: 400px;
+      }
+      #feedbackInfo{
+        width: 60%;
+        float:left;
+        position: relative;
+      }
+
+      #fixed{
+        background-color: #8CACB2;
+        position: fixed;
+        /* float: left; */
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        right: 10%;
+        top: 40%
+      }
+
+      #footer{
+        /* float: left; */
+        display: inline-block;
+        position: static;
+        background-color: #8CACB2;
+        text-align: right;
+        padding: 20px;
+        width: 100%;
+      }
+
+      #location{
+        font-weight: normal;
+        font-style: italic
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="header">
+      <img src="logo.png" alt="logo image">
+      <h1>Premium bookshop</h1>
+
+      <div id="nav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">BookS</a></li>
+          <li><a href="">Gits</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <div id="content">
+      <div id="fixed">
+        10% OFF $35+ | 15% OFF $60+ <br>
+        *USE CODE: HAPPYAPRIL
+      </div>
+
+      <div>
+        The Best Bookstore Online <br>
+        Over 6 million books ready for shipment within 24 hours and 4.5 million eBooks to download now. <br><br><br>
+      </div>
+
+      <hr width = "100%" color = "gray" size = "2">
+
+      <div class="bookInfo">
+          <h2>The President Is Missing</h2>
+          <p>
+            Please join us in welcoming President Bill Clinton and the world's bestselling author
+            James Patterson to celebrate the release of their new novel, The President is
+            Missing. A limited umber of wristbands for event acesss will be distributed
+            beginning at 9am the day of the even
+          </p>
+          <img src="clinton.jpg" alt="clinton image">
+          <hr style="border-top: 4px dotted gray;">
+      </div>
+
+
+
+      <div class="bookInfo">
+        <h2>
+          True Rootes: A Mindful Kitchen with More Than 100 <br>
+          Recipes Free of Gluten, Dairy, and Refined Sugar
+        </h2>
+        <p>
+          In her first book, Kristin Cavallari shared her pesrsonal journey along with her tips on
+          everything from style to relationships. And now, with True Roots, Cavallari shows
+          you that improving the way you eat doesn't have to be difficult-a clean and toxin-
+          free diet can and should be fun, easy, and enjoyable. She learned the hard way that dieting leads nowhere good,
+          and that a clean lifestyle is the ticket to feeling and being healthy.
+        </p>
+        <img src="roots.jpg" alt="roots image">
+        <hr style="border-top: 4px dotted gray;">
+      </div>
+
+
+
+      <div class="bookInfo">
+        <h2>
+          Selling Boldly: Applying the New Science of Positive<br>
+          Psychology to Dramatically Increase Your Confidence,<br>
+          Happiness, and Sales
+        </h2>
+        <p>
+          Fear is the reason most salespeople don't like to pick up the phone. Fear is
+            reason we don't ask for the business more, even though our customers want to buy from us.
+        </p>
+        <img src="selling.jpg" alt="selling image">
+        <hr style="border-top: 4px dotted gray;">
+      </div>
+
+
+
+      <div class="bookInfo">
+        <h2>
+          I've Got My Eyes on You (B&N Exclusive Edition)
+        </h2>
+        <p>
+          A new thriller from #1 New York bestselling author and "Queen of Suspense"
+          Mary Higgins Clark. After a party when her parents are away, eighteen-year-old Kerry
+          Dowling is found fully dressed at the bottom of the family pool. The immediate
+          suspect is her boyfriend who had a bitter argument with her at the party. Then there
+          us a twenty-year-old neighbor who was angry because she didn't invite him to the
+          party.
+        </p>
+        <img src="mary.jpg" alt="mary image">
+        <hr style="border-top: 4px dotted gray;">
+      </div>
+
+      <div id="feedbackInfo">
+        <p style="margin: 20px;">Send your feedback to us</p>
+        <textarea name="feedbackText" rows="20" cols="80"></textarea><br>
+        <input style="background-color: #8CACB2;" type="submit" name="submitBtn" value="Submit">
+        <hr style="border-top: 4px dotted gray; margin: 30px;">
+      </div>
+    </div>
+
+
+    <div id="footer">
+      Barnes & Noble Booksellers, Inc., Legal Department<br>
+      122 Fifth Avenue<br>
+      New York, NY 10011<br>
+      Fax: (212) 463-5683 <br><br><br>
+      <div id="location">
+        Location: <a href="">Click Map</a>
+      </div>
+    </div>
+  </body>
+</html>
