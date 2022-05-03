@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <style media="screen">
+
+      #shoppingName{
+        margin-top: 200px;
+        margin-left: 100px;
+        font-size: 500%;
+        <!-- color: white; -->
+      }
+      #loginForm{
+        position: absolute;
+        top: 15%;
+        left: 85%;
+      }
+      #loginForm input{
+        height: 30px;
+      }
+      #loginBtn{
+        width:100%;
+        padding: 8px;
+        background-color: green;
+        border: none;
+        font-weight: bold;
+      }
+    </style>
+
+    <script type="text/javascript">
+      function clickLoginBtn(){
+        var id = document.getElementById("idInfo").value;
+        var pw = document.getElementById("pwInfo").value;
+
+        alert("ID: "+id+"   "+ "PW: "+pw);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="shoppingName">Happy<br>Shopping</h1>
+
+    <div id="loginForm">
+      <form action="main.html" method="post">
+        ID<br>
+        <input id="idInfo" type="text"><br>
+        PW<br>
+        <input id="pwInfo" type="password"><br><br>
+        <button onclick="clickLoginBtn()" id="loginBtn">Login</button>
+      </form>
+    </div>
+
+  </body>
+</html>
+
+<!-- body{
+  background: url('loginImg.webp');
+  background-repeat: no-repeat;
+  background-size: 100% 500px;
+} -->
