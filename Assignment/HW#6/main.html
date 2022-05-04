@@ -42,13 +42,13 @@
 
       }
       #nav li a:hover{
-        color: blue;
+        color: red;
       }
 
       #content{
         width: 60%;
         position:relative;
-        left: 20%;
+        left: 23%;
         margin-top : 80px;
       }
       #pageName{
@@ -57,7 +57,8 @@
 
       #buyBtn{
           text-transform: uppercase;
-          width: 100%;
+          font-weight: bold;
+          width: 95%;
           background-color: skyblue;
           border: none;
           padding: 8px;
@@ -75,9 +76,7 @@
       }
       #fixedBtn a{
         text-decoration: none;
-
         color: black;
-
       }
       #footer{
         text-align:center;
@@ -98,12 +97,20 @@
         text-align: center;
       }
       .product p{
-        border-top: 2px solid black;
+        border: none;
         padding-top: 6px;
       }
       .product a{
         text-decoration: none;
         color: black;
+      }
+      .product_content_box:hover{
+        border:2px solid red;
+      }
+      .product_content_box div{
+        border:none;
+        /* float:left; */
+        width:100%;
       }
     </style>
   </head>
@@ -118,7 +125,7 @@
       <div id="nav">
         <ul>
           <li><a href="main.html">BEST</a></li>
-          <li><a href="#">FRUIT</a></li>
+          <li><a href="fruit.html">FRUIT</a></li>
           <li><a href="#">VEGETABLE</a></li>
           <li><a href="#">DAIRY</a></li>
           <li><a href="#">CLOTH</a></li>
@@ -131,49 +138,75 @@
       <div id="content">
         <h2 id="pageName">BEST FRUIT</h2>
         <script type="text/javascript">
-          var price = [5,6,4,10,5,7,7,2];
-          var name = ['Apple','Banana','Orange','Watermelon','Kiwi','Strawberry','grape','mango'];
+          var price = [5,6,4,10,5,7,1,2,3,4,5,6,7,8,9,10];
+          var productName = ['Apple','Banana','Orange','Watermelon','Kiwi','Strawberry','test1','test2','test3','test4','test5','test6','test7','test8','test9','test10'];
+          var image = ['apple.jpg','banana.jpg','orange.jpg','watermelon.jpg','kiwi.jpg','strawberry.jpg','test1.png','test2.jpg','test3.png','test4.jpg','test5.jpg','test6.jpg','test7.jpg','test8.jpg','test9.png','test10.jpg'];
           var i = 0;
-          for(;i<8;i++){
-            document.write('<div class="product" onclick="selectProduct(this)"><span>'+(i+1)+'</span><div><img  width="100px" height="100px" src="apple.jpg"><p>'+name[i]+'</p><p>'+price[i]+' $</p></div></div>');
+          var isSelected = [];
+          var totalPrice = 0;
+
+
+          for(;i<productName.length;i++){
+            document.write('<div class="product" id="product'+(i+1)+'"><span>'
+            +(i+1)+'</span><div class="product_content_box"><img onclick="selectProduct(this)" width="100%" height="180px" src="'
+            +image[i]+'"><div><p>'+productName[i]+'</p><p>'+price[i]+' $</p></div></div></div>');
+            isSelected[i]=false;
+          }
+          // for(;i<productName.length;i++){
+          //   document.write('<div class="product" onclick="selectProduct(this)"><span>'
+          //   +(i+1)+'</span><div class="product_content_box"><img width="100px" height="100px" src="'
+          //   +image[i]+'"><p id="product'+(i+1)+'">'+productName[i]+'</p><p>'+price[i]+' $</p></div></div>');
+          // }
+
+
+          function selectProduct(obj){
+              var objId = (obj.parentNode.parentNode.firstChild.innerHTML)-1;
+              if(isSelected[objId]){ //상품취소하는 경우
+
+                isSelected[objId] = false;
+                console.log(isSelected[objId]);
+                // 상품이미지를 본래 상품 이미지로 변경
+                obj.src = image[objId];
+                console.log(obj.src);
+                // 상품명 & 상품가격의 backgroundColor = ""(기본으)로 변경
+                obj.nextSibling.style.backgroundColor = "white";
+
+                //계산하기
+                var price = obj.nextSibling.childNodes[1].innerHTML.split(' $')[0];
+                totalPrice = totalPrice - parseInt(price);
+                return totalPrice;
+
+              }
+              else{ //상품추가하는 경우
+
+                isSelected[objId] = true;
+
+                // 상품이미지를 성공 이미지로 변경
+                obj.src = "selectImg.jpg";
+
+                // 상품명 & 상품가격의 backgroundColor = "red"로 변경
+                obj.nextSibling.style.backgroundColor = "red";
+
+                //계산하기
+                var price = obj.nextSibling.childNodes[1].innerHTML.split(' $')[0];
+                totalPrice = totalPrice + parseInt(price);
+                return totalPrice;
+
+              }
           }
 
-          var totalPrice = 0;
-          function selectProduct(obj){
-            var elementDiv = document.getElementsByClassName('product')[i];
 
-            if(obj.src =="selectImg.jpg"){ //상품취소하는 경우
-
-              // 상품이미지를 성공 이미지로 변경
-              obj.src = "apple.jpg";
-
-              // 상품명 & 상품가격의 backgroundColor = ""(기본으)로 변경
-              obj.getElementByTagName('p')[0].style.backgroundColor = "red";
-              obj.getElementByTagName('p')[1].style.backgroundColor = "red";
-
-              //계산하기
-              totalPrice = totalPrice-obj.getElementByTagName('p')[1].innerHTML; //Q. $달러 표시 어케 제외시키지?
-
-              return totalPrice;
+          function showTotalPrice(){
+            var selectProductList = [];
+            for(var i=0;i<isSelected.length;i++){
+              if(isSelected[i]===true){
+                selectProductList.push(productName[i]);
+                console.log(productName[i]);
+              }
             }
-            else{ //상품추가하는 경우
-
-              // 상품이미지를 성공 이미지로 변경
-              obj.src  = "selectImg.jpg";
-
-              // 상품명 & 상품가격의 backgroundColor = "red"로 변경
-              obj.getElementByTagName('p')[0].style.backgroundColor = "red";
-              obj.getElementByTagName('p')[1].style.backgroundColor = "red";
-
-              //계산하기
-              totalPrice = totalPrice+obj.getElementByTagName('p')[1].innerHTML; //Q. $달러 표시 어케 제외시키지?
-              return totalPrice;
-            }
-
-
+            alert(selectProductList.toString().replace(/,/g," ") +' is[are] selected!\n\n Total: '+totalPrice);
           }
         </script>
-
 
         <button id="buyBtn" onclick="showTotalPrice()" type="button" name="button">BUY</button>
 
