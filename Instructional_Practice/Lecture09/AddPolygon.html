@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<div id="map" style="width:800px; height: 500px"></div>
+
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var myCenter = new google.maps.LatLng(36.6283, 127.4583);
+  var P1 = new google.maps.LatLng(36.634892, 127.460189);
+  var P2 = new google.maps.LatLng(36.632602, 127.452969);
+  var P3 = new google.maps.LatLng(36.629468, 127.450040);
+  var P4 = new google.maps.LatLng(36.623583, 127.449789);
+  var P5 = new google.maps.LatLng(36.619150, 127.451671);
+  var P6 = new google.maps.LatLng(36.620904, 127.459955);
+  var P7 = new google.maps.LatLng(36.624386, 127.463718);
+
+  var mapOptions = {
+  	center: myCenter,
+    zoom: 15
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+
+  var marker = new google.maps.Marker({
+	  position:myCenter,
+    animation:google.maps.Animation.BOUNCE,
+	  icon: 'cbnu.png'
+  });
+  marker.setMap(map);
+
+  var myPath = new google.maps.Polygon({
+    path: [P1, P2, P3, P4, P5, P6, P7],
+    strokeColor: "#0000FF",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "#0000FF",
+    fillOpacity: 0.4
+  });
+  myPath.setMap(map);
+
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+
+</body>
+</html>
