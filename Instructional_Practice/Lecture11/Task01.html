@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      // $(document).ready(function(){
+      //   $("p:first").on({
+      //     mouseenter: function(){
+      //       $(this).css("background-color","yellow")
+      //     },
+      //     mouseleave: function(){
+      //       $(this).css("background-color","gray")
+      //     }
+      //   })
+      // });
+
+      $(document).ready(function(){
+        $("p:first").mouseenter(function(){
+          $("p:first").css({"background-color": "yellow"});
+        });
+
+        $("p:first").mouseleave(function(){
+          $("p:first").css({"background-color": "gray"});
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h2>This is a heading</h2>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+  </body>
+</html>
