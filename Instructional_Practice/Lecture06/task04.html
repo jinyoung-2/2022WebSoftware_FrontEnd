@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>2022 Webprogramming</title>
+    <style media="screen">
+
+      #header h1{
+        text-align: center;
+      }
+      ul{
+        text-align: center;
+        border: 2px solid red;
+        padding: 20px;
+      }
+      ul li{
+        display: inline;
+        padding: 20px;
+      }
+      ul li a{
+        text-decoration: none;
+      }
+      ul li a:hover{
+        padding:10px;
+        background-color:blue;
+        color:white;
+      }
+      img{
+        float:left;
+        margin: 10px;
+      }
+      hr{
+        clear:both;
+      }
+      #upBtn{
+        background-color: skyblue;
+        width: 50px;
+        height:25px;
+        border: none;
+        text-align: center;
+        position: fixed;
+        bottom: 30px;
+        right: 20px;
+      }
+
+
+      #content{
+        text-align:center;
+      }
+      #con1{
+        width: 100%;
+        float:left;
+        background-color: beige;
+      }
+      #con2{
+        width: 100%;
+        float:left;
+        background-color: pink;
+      }
+      #con3{
+        width: 100%;
+        float:left;
+        background-color: yellow;
+      }
+
+      #footer{
+        width: 100%;
+        float:left;
+        background-color: orange;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <h1 id="home">My Homepage</h1>
+      </div>
+
+      <div>
+        <ul id="top_section">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#introduce">INTRODUCE</a></li>
+          <li><a href="#content">CONTENT</a></li>
+          <li><a href="#schedule">SCHEDULE</a></li>
+          <li><a href="#more">MORE</a></li>
+        </ul>
+      </div>
+
+      <div id="nav1">
+        <img src="img1.png" width="150" height="200">
+      </div>
+
+      <div id="nav2">
+        <h2 id="introduce">Introduce</h2>
+        <p>Hello! My name is ~~~~</p>
+        <p>My major is ~~~~</p>
+        <p>My number is ~~~~</p>
+        <p>My hobby is ~~~~</p>
+      </div>
+      <hr>
+
+      <div id="content">
+        <div id="con1">
+          <h3>content</h3>
+          <h3>content</h3>
+          <h3>content</h3>
+          <h3>content</h3>
+          <h3>content</h3>
+          <h3>content</h3>
+        </div>
+        <div id="con2">
+          <h3>schedule</h3>
+          <h3>schedule</h3>
+          <h3>schedule</h3>
+          <h3>schedule</h3>
+          <h3>schedule</h3>
+          <h3>schedule</h3>
+        </div>
+        <div id="con3">
+          <h3>more</h3>
+          <h3>more</h3>
+          <h3>more</h3>
+          <h3>more</h3>
+          <h3>more</h3>
+          <h3>more</h3>
+        </div>
+      </div>
+
+      <div id="footer">
+        2022 Webprogramming
+      </div>
+
+      <button id="upBtn" type="button">
+         <a href="#top_section">UP</a>
+       </button>
+    </div>
+  </body>
+</html>
