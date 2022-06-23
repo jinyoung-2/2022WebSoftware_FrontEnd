@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript Examples.html</title>
+  </head>
+  <body>
+    <h1>JavaScript String</h1><br>
+    <p>Original String:</p>
+    <p id="original"></p>
+
+    <p>Replaced String:</p>
+    <p id="replaced"></p>
+
+    <script>
+      var originalStr = "best";
+      var firstChar = originalStr.charAt(0);
+      // 위의 코드와 동일한 코드
+      // var firstChar = originalStr[0];
+      var replacedStr = originalStr.replace(firstChar,"t");
+
+      document.getElementById("original").innerHTML = originalStr;
+      document.getElementById("replaced").innerHTML = replacedStr;
+    </script>
+
+  </body>
+</html>
