@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    function humanize(num){
+      if(num % 100 >= 11 && num % 100 <= 13)
+        return num + "th";
+
+      switch(num % 10) {
+              case 1: return num + "st";
+              case 2: return num + "nd";
+              case 3: return num + "rd";
+        default: return num + "th";
+          }
+    }
+
+      document.write(humanize(1) + "<br>");
+    	document.write(humanize(8) + "<br>");
+    	document.write(humanize(301) + "<br>");
+    	document.write(humanize(402) + "<br>");
+    	document.write(humanize(711) + "<br>");
+    </script>
+  </body>
+</html>
