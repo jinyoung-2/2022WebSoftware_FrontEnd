@@ -1,0 +1,54 @@
+<!-- 안 되는 이유 찾기 -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function createTable(){
+        var num = 3;
+        var i = 1;
+        document.wirte("<table border = '1'>");
+        for( ; i<= 9; i++){
+          document.write("<tr>");
+          document.write("<td>"+num+"</td>");
+          document.write("<td>"+i+"</td>");
+          document.write("<td>"+num*i+"</td>");
+          document.write("</tr>");
+        }
+        document.wirte("</table>");
+      }
+      createTable();
+    </script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table border="1">
+      <script>
+        function createTable(){
+          var num = 3;
+          var i = 1;
+
+          for( ; i<= 9; i++){
+            document.write("<tr>");
+            document.write("<td>"+num+"</td>");
+            document.write("<td>"+i+"</td>");
+            document.write("<td>"+num*i+"</td>");
+            document.write("</tr>");
+          }
+        }
+        createTable();
+      </script>
+    </table>
+
+  </body>
+</html> -->
