@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>The Document Object</h2>
+    <h2 id="ex">The query</h2>
+    <p> Add a </p>
+    <h2 class="ex2">A heading</h2>
+    <p class="ex2">A paragraph</p>
+
+    <script type="text/javascript">
+      // const nodeList=document.querySelectorAll('#ex');
+      // nodeList[0].style.backgroundColor="blue";
+
+      const collectionList=document.getElementsByTagName("h2");
+      collectionList[1].style.backgroundColor="blue";
+
+      const nodeList = document.querySelectorAll('.ex2');
+      for(var i=0;i<nodeList.length;i++){
+        nodeList[i].style.backgroundColor = "yellow";
+      }
+
+    </script>
+  </body>
+</html>
