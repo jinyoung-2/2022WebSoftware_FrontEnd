@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>The Document</h1>
+    <h2>Dom </h2>
+    <p id="original">JavaScript</p>
+    <button type="button" onclick="clickBtn()" name="button">Try it</button>
+    <p id="new"></p>
+
+    <script type="text/javascript">
+      function clickBtn(){
+          var str = document.getElementById("original").innerHTML;
+          // tag안의 content인 "JavaScript"에 접근하겠다.
+          // str변수는 JavaScript content를 가지고 있음
+
+          document.getElementById("new").innerHTML = "<h1>" + str + "</h1>";
+          // document.querySelectorAll("#new")[0].style.color="green"; //querySelectorAll은 nodeList가 반환되어, 배열인덱스로 처리해줘야 함
+          document.getElementById("new").style.color = "green";
+      }
+    </script>
+  </body>
+</html>
