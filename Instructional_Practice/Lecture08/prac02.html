@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Title</title>
+  </head>
+  <body>
+    <ul>
+      <script type="text/javascript">
+        var i = 1;
+        for(;i<6;i++){
+          document.write("<li class="list_class"> List item with class " + i + "</li>");
+        }
+
+        function clickAlert(){
+          var msg = document.querySelectorAll(".list_class")[2];
+          alert(msg);
+        }
+      </script>
+    </ul>
+    <button type="button" onclick="clickAlert()" name="button">Click</button>
+  </body>
+</html>
