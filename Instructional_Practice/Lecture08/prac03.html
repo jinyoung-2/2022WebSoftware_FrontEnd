@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Login</h1>
+
+    <form action="" method="post">
+      ID: <input id="Id" type="text"><br>
+      PW: <input id="Pw" type="password"><br>
+
+      <button type="button" onclick="loginReq()" name="button">Login</button>
+      <!-- onclick시, 함수에 ;를 붙여야하나? -->
+    </form>
+
+    <script type="text/javascript">
+
+      // Q. 아래 방법으로 코드하면, 답이 올바르게 출력되지 않는 이유가 무엇인가?
+      var getId = document.getElementById("Id").value;
+      var getPw = document.getElementById("Pw").value;
+      
+      function loginReq(){
+        alert("ID: "+getId+" " + "PW: "+getPw);
+      }
+
+      // function loginReq(){
+      //   var getId = document.getElementById("Id").value;
+      //   var getPw = document.getElementById("Pw").value;
+      //   alert("ID: "+getId+" " + "PW: "+getPw);
+      // }
+    </script>
+  </body>
+</html>
