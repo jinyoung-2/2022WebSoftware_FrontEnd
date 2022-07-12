@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function change(){
+        const x = document.getElementById("target4");
+        x.style.backgroundColor="yellow";
+      }
+    </script>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+          <script>
+              for(var i = 1; i < 5; i++) {
+                  document.write('<td id="target'+i+'"> td'+i+"</td>");   //주의
+              }
+          </script>
+      </tr>
+      <tr>
+          <script>
+              for(var i = 5; i < 9; i++) {
+                  document.write('<td id="target'+ i +'">td'+ i +'</td>'); //주의
+              }
+          </script>
+      </tr>
+    </table>
+    <button onclick="change()" type="button" name="button">Change</button>
+  </body>
+</html>
